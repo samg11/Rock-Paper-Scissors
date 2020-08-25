@@ -21,13 +21,28 @@ function play(userChoice) {
 
 	// get winner
 	var cus = `${computerChoice.split('')[0] + userChoice.split('')[0]}`
-	if (cus == 'rr' ||cus == 'pp' || cus == 'ss') {var winner = "It was tie!"}
-	else if (cus == 'rs' || cus == 'pr' || cus == 'sp') {var winner = "Computer Wins!";computerScore++}
-	else if (cus == 'sr' || cus == 'rp' || cus == 'ps') {var winner = "User Wins!";userScore++}
+	if (cus == 'rr' ||cus == 'pp' || cus == 'ss') {
+		var winner = "It was tie!";
+	}
 
-	// debug logs
-	console.log(`The user chose ${userChoice}\nThe computer chose ${computerChoice}`)
-	console.log(computerChoice.split('')[0] + userChoice.split('')[0])
-	console.log(winner)
-	console.log(`User Score: ${userScore}\nComputer Score: ${computerScore}\nTotal rounds: ${number_of_rounds}`)
+	else if (cus == 'rs' || cus == 'pr' || cus == 'sp') {
+		var winner = `Computer Wins! ${computerChoice.toUpperCase()} beats ${userChoice.toUpperCase()}!`;computerScore++;
+	}
+
+	else if (cus == 'sr' || cus == 'rp' || cus == 'ps') {
+		var winner = `User  Wins! ${userChoice.toUpperCase()} beats ${computerChoice.toUpperCase()}!`;userScore++;
+	}
+
+	// output
+	document.getElementById("us").innerHTML = '<a style="font-size:0.7rem;">User Score: </a><br>' + userScore;
+	document.getElementById("cs").innerHTML = '<a style="font-size:0.7rem;">Computer Score: </a><br>' + computerScore;
+	document.getElementById("tr").innerHTML = "Total Rounds: " + number_of_rounds;
+	document.getElementById("more_results").innerHTML = winner;
+}
+
+function openInNewTab(href) {
+	Object.assign(document.createElement('a'), {
+	target: '_blank',
+	href,
+}).click();
 }

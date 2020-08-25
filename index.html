@@ -7,9 +7,37 @@
 		<link rel="stylesheet" href="style\style.css">
 	</head>
 	<body>
-		<h1>Rock Paper Scissors</h1>
-		<img onclick="play('rock')" width="80" src="images\rock.png" alt="Rock">
-		<img onclick="play('paper')" width="80" src="images\paper.png" alt="Paper">
-		<img onclick="play('scissors')" width="80" src="images\scissors.png" alt="Scissors">
+		<header>
+			<h1>Rock Paper Scissors</h1>
+			<!--<h2>User Score: <a id="us">0</a></h2>-->
+			<!--<h2>Computer Score: <a id="cs">0</a></h2>-->
+			<div id="scoreBlock">
+				<h1 id="us"><a style="font-size:0.7rem;">User Score</a><br>0</h1>
+				<h1 id="cs"><a style="font-size:0.7rem;">Computer Score</a><br>0</h1>
+			</div>
+		</header>
+		
+		<div id="userChoices">
+			<img onclick="play('rock')" src="images\rock.png" alt="Rock">
+			<img onclick="play('paper')" src="images\paper.png" alt="Paper">
+			<img onclick="play('scissors')" src="images\scissors.png" alt="Scissors">
+		</div>
+
+		<h3 id="more_results"></h3>
+		<h3 id="tr"></h3>
+
+		<footer>
+			<img onclick= 'openInNewTab("https://github.com/samg11");' style="float:right;" id="github_logo" src="images\github_logos\GitHub-Mark-Light-64px.png" alt="Github">
+			<center>
+			<h3 class='c'>Rock Paper Scissors</h3>
+			<h4 class='c'>by Sam Girshovich</h4>
+			</center>
+			<br>
+			<p style="float:left;">&copy Sam Girshovich 2020</p><br>
+			<p style="float:left;"></p>
+		</footer>
+</body>
+</html>
+		</footer>
 	</body>
 </html>
