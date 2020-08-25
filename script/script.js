@@ -30,6 +30,4 @@ function play(userChoice) {
 	console.log(computerChoice.split('')[0] + userChoice.split('')[0])
 	console.log(winner)
 	console.log(`User Score: ${userScore}\nComputer Score: ${computerScore}\nTotal rounds: ${number_of_rounds}`)
-
-
 }
